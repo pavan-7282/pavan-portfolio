@@ -1,0 +1,54 @@
+.achievements-section {
+  min-height: 100vh;
+  /* MASTER LAYOUT ALIGNMENT */
+  padding: var(--master-pt) var(--master-pr) var(--master-pb) var(--master-pl);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.achievements-section h2 {
+  font-family: "Outfit", sans-serif;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  margin-bottom: 20px;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.achievements-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.achievements-section p {
+  color: var(--text-secondary);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .achievements-section {
+    padding: var(--resp-pt) var(--resp-pr) var(--resp-pb) var(--resp-pl);
+  }
+}
+
+@media (max-width: 480px) {
+  .achievements-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

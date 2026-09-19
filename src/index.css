@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&family=Dancing+Script:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --bg-primary: #0F141A;
+  --bg-secondary: #171D24;
+  --card-bg: #1D252E;
+  --card-hover: #222C36;
+  --border: #303A45;
+  --border-hover: #435363;
+
+  --primary: #5B9BD5;
+  --primary-hover: #7DB5E8;
+  --primary-dark: #4A8BC2;
+
+  --text-primary: #F1F5F9;
+  --text-secondary: #9AA6B2;
+  --text-muted: #6B7785;
+
+  --white: #FFFFFF;
+  --black: #0A0E12;
+
+  --glass-bg: rgba(29, 37, 46, 0.4);
+  --glass-border: rgba(48, 58, 69, 0.5);
+
+  --primary-gradient: linear-gradient(135deg, #5B9BD5 0%, #7DB5E8 100%);
+
+  /* MASTER LAYOUT CONSTANTS */
+  --master-pt: 100px;
+  --master-pb: 60px;
+  --master-pl: 5%;
+  --master-pr: 5%;
+
+  /* RESPONSIVE LAYOUT CONSTANTS */
+  --resp-pt: 80px;
+  --resp-pb: 40px;
+  --resp-pl: 20px;
+  --resp-pr: 20px;
+
+  font-family: 'Inter', 'Poppins', sans-serif;
+  color-scheme: dark;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--text-primary);
+  min-height: 100vh;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(91, 155, 213, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(91, 155, 213, 0.08) 0%, transparent 40%);
+}
+
+h1, h2, h3, h4, h5, h6, .logo-text {
+  font-family: 'Outfit', sans-serif;
+  color: var(--text-primary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-family: inherit;
+}
+
+img, svg, video, canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive Container */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 32px;
+  }
+}
+
+/* Master Section Class - Fluid Padding */
+.master-section {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  padding: var(--master-pt) var(--master-pr) var(--master-pb) var(--master-pl);
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --master-pl: 20px;
+    --master-pr: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .master-section {
+    padding: var(--resp-pt) var(--resp-pr) var(--resp-pb) var(--resp-pl);
+  }
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
+}

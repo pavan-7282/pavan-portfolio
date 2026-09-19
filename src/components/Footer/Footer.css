@@ -1,0 +1,32 @@
+.footer {
+  width: 100%;
+  /* MASTER ALIGNMENT - Matching side padding of all pages */
+  padding: 40px var(--master-pr) 40px var(--master-pl);
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-primary);
+  box-sizing: border-box;
+}
+
+.footer-content p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px var(--resp-pr) 30px var(--resp-pl);
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

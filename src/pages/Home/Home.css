@@ -1,0 +1,965 @@
+/* =========================================
+   HOME SECTION
+========================================= */
+
+.home-section {
+  min-height: 100vh;
+  width: 100%;
+
+  background-color: var(--bg-primary);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 0 5%;
+}
+
+
+/* =========================================
+   HOME CONTAINER
+========================================= */
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: 1280px;
+
+  margin: 0 auto;
+
+  gap: 50px;
+
+  z-index: 2;
+}
+
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.home-content {
+  flex: 1.2;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+
+  min-width: 0;
+}
+
+
+/* =========================================
+   HELLO TAG
+========================================= */
+
+.hello-tag {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  color: var(--text-secondary);
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+}
+
+.hello-tag .line {
+  width: 40px;
+  height: 1px;
+
+  background-color: var(--primary);
+
+  opacity: 0.5;
+}
+
+
+/* =========================================
+   HERO TITLE
+========================================= */
+
+.hero-title {
+  font-size: clamp(3.5rem, 8vw, 6rem);
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  color: var(--text-primary);
+
+  margin: 0;
+}
+
+.hero-title .highlight {
+  color: var(--primary);
+
+  background: var(--primary-gradient);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================================
+   HERO ROLE
+========================================= */
+
+.hero-role {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+
+  font-weight: 700;
+
+  color: var(--text-primary);
+
+  margin: 0;
+}
+
+.hero-role .accent {
+  color: var(--primary);
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.hero-description {
+  max-width: 500px;
+
+  color: var(--text-secondary);
+
+  font-size: 1.1rem;
+
+  line-height: 1.7;
+
+  margin: 0 0 20px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  margin-bottom: 40px;
+}
+
+
+/* PRIMARY */
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 16px 35px;
+
+  background: var(--primary-gradient);
+
+  color: var(--bg-primary);
+
+  border-radius: 50px;
+
+  font-weight: 700;
+
+  font-size: 1rem;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 10px 25px rgba(91, 155, 213, 0.3);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 30px rgba(91, 155, 213, 0.4);
+}
+
+
+/* SECONDARY */
+
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 16px 30px;
+
+  background: transparent;
+
+  color: var(--text-primary);
+
+  border: 1px solid var(--border);
+
+  border-radius: 50px;
+
+  font-weight: 600;
+
+  font-size: 1rem;
+
+  text-decoration: none;
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--primary);
+
+  background: rgba(255, 255, 255, 0.05);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   FOOTER TAGS
+========================================= */
+
+.home-footer-tags {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  margin-top: 20px;
+}
+
+.footer-line {
+  width: 2px;
+  height: 35px;
+
+  background: var(--primary);
+}
+
+.tags-wrapper {
+  display: flex;
+
+  gap: 15px;
+
+  font-size: 0.8rem;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: var(--text-muted);
+}
+
+.tags-wrapper .separator {
+  opacity: 0.3;
+}
+
+
+/* =========================================
+   RIGHT VISUAL
+========================================= */
+
+.home-visual {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  min-width: 0;
+
+  /*
+    Reserve some space on the right
+    for the decorative text.
+  */
+  padding-right: 100px;
+}
+
+
+/* =========================================
+   PROFILE WRAPPER
+========================================= */
+
+.visual-wrapper {
+  position: relative;
+
+  width: clamp(300px, 35vw, 500px);
+  height: clamp(300px, 35vw, 500px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   PROFILE RING
+========================================= */
+
+.profile-glow-ring {
+  width: 90%;
+  height: 90%;
+
+  border-radius: 50%;
+
+  padding: 10px;
+
+  border: 2px solid rgba(91, 155, 213, 0.2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  box-shadow:
+    0 0 60px rgba(91, 155, 213, 0.1);
+}
+
+
+/* ROTATING RING */
+
+.profile-glow-ring::before {
+  content: "";
+
+  position: absolute;
+
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+
+  border-radius: 50%;
+
+  border: 2px solid transparent;
+
+  border-top-color: var(--primary);
+  border-left-color: var(--primary);
+
+  animation: spin 10s linear infinite;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   PROFILE IMAGE
+========================================= */
+
+.profile-image-container {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  border: 4px solid var(--bg-secondary);
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.profile-image-container img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform 0.5s ease;
+}
+
+.profile-image-container:hover img {
+  transform: scale(1.04);
+}
+
+
+/* =========================================
+   DECORATIVE DOTS
+========================================= */
+
+.orbit-dot {
+  position: absolute;
+
+  background-color: var(--primary);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 15px var(--primary);
+
+  z-index: 4;
+}
+
+.dot-top {
+  top: 5%;
+  right: 20%;
+
+  width: 8px;
+  height: 8px;
+}
+
+.dot-right {
+  right: -15px;
+  top: 45%;
+
+  width: 10px;
+  height: 10px;
+}
+
+.dot-bottom {
+  bottom: 20%;
+  left: 10%;
+
+  width: 6px;
+  height: 6px;
+}
+
+
+/* =========================================
+   DECORATIVE TEXT - DESKTOP
+========================================= */
+
+.visual-decorative-text {
+  position: absolute;
+
+  /*
+    Position text to the RIGHT
+    of the profile image.
+  */
+  left: calc(50% + 215px);
+
+  top: 27%;
+
+  width: 150px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+
+  font-family: "Dancing Script", cursive;
+
+  font-size: 1.9rem;
+
+  line-height: 1.25;
+
+  color: var(--text-muted);
+
+  opacity: 0.65;
+
+  text-align: center;
+
+  transform: rotate(-10deg);
+
+  white-space: normal;
+
+  z-index: 5;
+
+  pointer-events: none;
+}
+
+.visual-decorative-text span {
+  display: block;
+}
+
+
+/* =========================================
+   AVAILABILITY
+========================================= */
+
+.availability-bar {
+  position: absolute;
+
+  bottom: 40px;
+  right: 5%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  font-size: 0.9rem;
+
+  font-weight: 500;
+
+  color: var(--text-secondary);
+
+  background: rgba(29, 37, 46, 0.4);
+
+  padding: 8px 20px;
+
+  border-radius: 30px;
+
+  backdrop-filter: blur(10px);
+
+  z-index: 5;
+}
+
+
+/* STATUS */
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+
+  background-color: #22c55e;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 10px #22c55e;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes spin {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* =========================================
+   LARGE TABLET / SMALL DESKTOP
+========================================= */
+
+@media (max-width: 1200px) {
+
+  .home-container {
+    gap: 25px;
+  }
+
+  .home-visual {
+    padding-right: 50px;
+  }
+
+  .visual-decorative-text {
+    left: calc(50% + 185px);
+
+    width: 130px;
+
+    font-size: 1.6rem;
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .home-section {
+    justify-content: flex-start;
+  }
+
+  .home-container {
+    flex-direction: column-reverse;
+
+    text-align: center;
+
+    padding-top: 110px;
+
+    gap: 30px;
+  }
+
+  .home-content {
+    align-items: center;
+  }
+
+  .hello-tag {
+    justify-content: center;
+  }
+
+  .hero-description {
+    margin: 0 auto 20px;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .home-footer-tags {
+    justify-content: center;
+  }
+
+
+  /* VISUAL */
+
+  .home-visual {
+    width: 100%;
+
+    min-height: 380px;
+
+    padding-right: 0;
+  }
+
+  .visual-wrapper {
+    width: 350px;
+    height: 350px;
+  }
+
+
+  /*
+    Put decorative text ABOVE the image
+    on tablet, but keep enough distance.
+  */
+
+  .visual-decorative-text {
+    left: 50%;
+
+    top: -45px;
+
+    width: 190px;
+
+    font-size: 1.7rem;
+
+    transform:
+      translateX(-50%)
+      rotate(-5deg);
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .home-section {
+    min-height: 100vh;
+
+    width: 100%;
+
+    padding:
+      90px
+      20px
+      35px;
+
+    justify-content: flex-start;
+
+    overflow: hidden;
+  }
+
+
+  .home-container {
+
+    width: 100%;
+
+    padding-top: 0;
+
+    gap: 25px;
+  }
+
+
+  /* =======================================
+     MOBILE CONTENT
+  ======================================= */
+
+  .home-content {
+    width: 100%;
+
+    gap: 15px;
+  }
+
+
+  .hello-tag {
+    font-size: 0.8rem;
+
+    letter-spacing: 2.5px;
+  }
+
+
+  .hello-tag .line {
+    width: 35px;
+  }
+
+
+  .hero-title {
+    font-size: 3rem;
+
+    line-height: 0.95;
+  }
+
+
+  .hero-role {
+    font-size: 1.7rem;
+
+    line-height: 1.2;
+  }
+
+
+  .hero-description {
+    max-width: 450px;
+
+    font-size: 1rem;
+
+    line-height: 1.6;
+
+    margin-bottom: 10px;
+  }
+
+
+  /* =======================================
+     MOBILE BUTTONS
+  ======================================= */
+
+  .hero-actions {
+    flex-direction: column;
+
+    width: 100%;
+
+    gap: 12px;
+
+    margin-bottom: 10px;
+  }
+
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+
+    justify-content: center;
+
+    padding: 14px 25px;
+  }
+
+
+  /* =======================================
+     MOBILE VISUAL
+  ======================================= */
+
+  .home-visual {
+
+    width: 100%;
+
+    min-height: 335px;
+
+    padding: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+  }
+
+
+  .visual-wrapper {
+
+    width: 270px;
+
+    height: 270px;
+  }
+
+
+  /*
+    IMPORTANT:
+    Move the decorative text BELOW
+    the profile image.
+
+    It will never overlap the image.
+  */
+
+  .visual-decorative-text {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: auto;
+
+    bottom: -40px;
+
+    width: 220px;
+
+    font-size: 1.35rem;
+
+    line-height: 1.2;
+
+    text-align: center;
+
+    transform:
+      translateX(-50%)
+      rotate(-4deg);
+
+    z-index: 5;
+  }
+
+
+  /* =======================================
+     MOBILE FOOTER TAGS
+  ======================================= */
+
+  .home-footer-tags {
+
+    margin-top: 5px;
+  }
+
+
+  .tags-wrapper {
+
+    gap: 8px;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  /* =======================================
+     AVAILABILITY
+  ======================================= */
+
+  .availability-bar {
+
+    position: relative;
+
+    bottom: auto;
+
+    right: auto;
+
+    margin: 20px auto 0;
+
+    width: fit-content;
+
+    justify-content: center;
+
+    font-size: 0.8rem;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .home-section {
+
+    padding:
+      85px
+      15px
+      30px;
+  }
+
+
+  .home-container {
+
+    gap: 20px;
+  }
+
+
+  .hero-title {
+
+    font-size: 2.6rem;
+  }
+
+
+  .hero-role {
+
+    font-size: 1.45rem;
+  }
+
+
+  .hero-description {
+
+    font-size: 0.95rem;
+
+    line-height: 1.5;
+  }
+
+
+  /* SMALL PROFILE */
+
+  .home-visual {
+
+    min-height: 290px;
+  }
+
+
+  .visual-wrapper {
+
+    width: 235px;
+
+    height: 235px;
+  }
+
+
+  /*
+    Decorative text stays below
+    the profile on small screens.
+  */
+
+  .visual-decorative-text {
+
+    bottom: -32px;
+
+    width: 190px;
+
+    font-size: 1.15rem;
+
+    line-height: 1.15;
+  }
+
+
+  .availability-bar {
+
+    font-size: 0.75rem;
+
+    padding:
+      7px
+      14px;
+  }
+
+}

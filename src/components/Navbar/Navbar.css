@@ -1,0 +1,117 @@
+.header {
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* FLUID PADDING */
+  padding: 0 var(--master-pr) 0 var(--master-pl);
+  box-sizing: border-box;
+  background: rgba(15, 20, 26, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-mark {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  font-family: "Outfit", sans-serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+/* NAV MENU - RESPONSIVE FLEX */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: clamp(15px, 3vw, 35px);
+}
+
+.nav-menu a {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+  color: var(--primary);
+}
+
+/* HEADER RIGHT */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.lets-talk-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+}
+
+.lets-talk-btn:hover {
+  background: var(--primary);
+  color: var(--bg-primary);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+}
+
+/* RESPONSIVE OVERRIDES */
+@media (max-width: 1024px) {
+  .nav-menu {
+    display: none; /* Usually toggled via JS/State for mobile drawer */
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 70px;
+    padding: 0 var(--resp-pr) 0 var(--resp-pl);
+  }
+  .lets-talk-btn {
+    display: none;
+  }
+}
